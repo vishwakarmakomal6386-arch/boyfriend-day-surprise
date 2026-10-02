@@ -1,0 +1,1520 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>For My Jaan ❤️</title>
+
+
+    <!-- Romantic Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+
+    <style>
+
+        /* ================================
+           BASIC SETTINGS
+        ================================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        body {
+
+            min-height: 100vh;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #fff0f5,
+                    #ffe4ec,
+                    #fff7fa
+                );
+
+            font-family: 'Poppins', sans-serif;
+
+            color: #5c2638;
+
+            overflow-x: hidden;
+        }
+
+
+
+        /* ================================
+           FLOATING HEARTS
+        ================================= */
+
+        .heart {
+
+            position: fixed;
+
+            bottom: -50px;
+
+            font-size: 20px;
+
+            animation:
+                floatHeart 7s linear infinite;
+
+            opacity: 0.7;
+
+            pointer-events: none;
+
+            z-index: 1;
+        }
+
+
+        @keyframes floatHeart {
+
+            0% {
+
+                transform:
+                    translateY(0)
+                    rotate(0deg);
+
+                opacity: 0;
+            }
+
+
+            20% {
+
+                opacity: 0.8;
+            }
+
+
+            100% {
+
+                transform:
+                    translateY(-110vh)
+                    rotate(360deg);
+
+                opacity: 0;
+            }
+        }
+
+
+
+        /* ================================
+           INTRO SCREEN
+        ================================= */
+
+        #intro {
+
+            position: fixed;
+
+            inset: 0;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #ff758c,
+                    #ff7eb3
+                );
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            text-align: center;
+
+            z-index: 100;
+
+            transition:
+                opacity 1s ease;
+        }
+
+
+        .intro-content {
+
+            animation:
+                introZoom 1.5s ease;
+        }
+
+
+        .intro-heart {
+
+            font-size: 75px;
+
+            animation:
+                heartbeat 1.2s infinite;
+
+            margin-bottom: 15px;
+        }
+
+
+        .intro-title {
+
+            color: white;
+
+            font-family:
+                'Dancing Script',
+                cursive;
+
+            font-size:
+                clamp(
+                    42px,
+                    8vw,
+                    80px
+                );
+
+            line-height: 1.1;
+        }
+
+
+        .intro-subtitle {
+
+            color: white;
+
+            margin-top: 15px;
+
+            font-size: 17px;
+
+            letter-spacing: 2px;
+        }
+
+
+        @keyframes heartbeat {
+
+            0%,
+            100% {
+
+                transform: scale(1);
+            }
+
+
+            50% {
+
+                transform: scale(1.18);
+            }
+        }
+
+
+        @keyframes introZoom {
+
+            from {
+
+                opacity: 0;
+
+                transform:
+                    scale(0.7);
+            }
+
+
+            to {
+
+                opacity: 1;
+
+                transform:
+                    scale(1);
+            }
+        }
+
+
+
+        /* ================================
+           ROMANTIC STICKER SCREEN
+        ================================= */
+
+        #stickerScreen {
+
+            position: fixed;
+
+            inset: 0;
+
+            background: #fff5f8;
+
+            display: none;
+
+            justify-content: center;
+
+            align-items: center;
+
+            text-align: center;
+
+            z-index: 90;
+
+            transition:
+                opacity 0.8s ease;
+        }
+
+
+        .sticker {
+
+            animation:
+                stickerPop 0.8s ease;
+        }
+
+
+        .couple {
+
+            font-size: 100px;
+
+            margin-bottom: 20px;
+
+            animation:
+                coupleBounce 1.5s infinite;
+        }
+
+
+        .sticker-text {
+
+            font-family:
+                'Dancing Script',
+                cursive;
+
+            font-size: 38px;
+
+            color: #d6336c;
+        }
+
+
+        @keyframes stickerPop {
+
+            from {
+
+                transform:
+                    scale(0);
+
+                opacity: 0;
+            }
+
+
+            to {
+
+                transform:
+                    scale(1);
+
+                opacity: 1;
+            }
+        }
+
+
+        @keyframes coupleBounce {
+
+            0%,
+            100% {
+
+                transform:
+                    scale(1);
+            }
+
+
+            50% {
+
+                transform:
+                    scale(1.08);
+            }
+        }
+
+
+
+        /* ================================
+           MAIN PAGE
+        ================================= */
+
+        #main {
+
+            display: none;
+
+            min-height: 100vh;
+
+            padding:
+                40px 18px 70px;
+
+            position: relative;
+
+            z-index: 2;
+        }
+
+
+        .container {
+
+            max-width: 850px;
+
+            margin: auto;
+        }
+
+
+
+        /* ================================
+           TOP TITLE
+        ================================= */
+
+        .top-title {
+
+            text-align: center;
+
+            margin-bottom: 25px;
+        }
+
+
+        .top-title h1 {
+
+            font-family:
+                'Dancing Script',
+                cursive;
+
+            color: #d6336c;
+
+            font-size:
+                clamp(
+                    42px,
+                    7vw,
+                    65px
+                );
+        }
+
+
+        .top-title p {
+
+            color: #a64d68;
+
+            margin-top: 5px;
+        }
+
+
+
+        /* ================================
+           LOVE LETTER
+        ================================= */
+
+        .letter {
+
+            background:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.94
+                );
+
+            border-radius: 25px;
+
+            padding:
+                35px 30px;
+
+            box-shadow:
+                0 15px 50px
+                rgba(
+                    170,
+                    60,
+                    100,
+                    0.15
+                );
+
+            border:
+                1px solid
+                rgba(
+                    255,
+                    150,
+                    180,
+                    0.3
+                );
+        }
+
+
+        .letter h2 {
+
+            font-family:
+                'Dancing Script',
+                cursive;
+
+            text-align: center;
+
+            font-size: 42px;
+
+            color: #d6336c;
+
+            margin-bottom: 30px;
+        }
+
+
+        .letter p {
+
+            font-family:
+                'Dancing Script',
+                cursive;
+
+            font-size: 24px;
+
+            line-height: 1.7;
+
+            margin-bottom: 22px;
+        }
+
+
+        .highlight {
+
+            text-align: center;
+
+            font-size: 30px !important;
+
+            color: #d6336c;
+
+            margin:
+                35px 0 !important;
+        }
+
+
+        .love-final {
+
+            text-align: center;
+
+            font-family:
+                'Dancing Script',
+                cursive;
+
+            color: #d6336c;
+
+            font-size: 42px;
+
+            font-weight: 700;
+
+            margin-top: 40px;
+        }
+
+
+
+        /* ================================
+           HUG SECTION
+        ================================= */
+
+        .hug-section {
+
+            text-align: center;
+
+            margin-top: 55px;
+        }
+
+
+        .hug {
+
+            font-size: 120px;
+
+            display: inline-block;
+
+            animation:
+                hugAnimation 2s
+                ease-in-out
+                infinite;
+        }
+
+
+        @keyframes hugAnimation {
+
+            0%,
+            100% {
+
+                transform:
+                    scale(1)
+                    rotate(0deg);
+            }
+
+
+            25% {
+
+                transform:
+                    scale(1.05)
+                    rotate(-3deg);
+            }
+
+
+            50% {
+
+                transform:
+                    scale(1.1)
+                    rotate(3deg);
+            }
+
+
+            75% {
+
+                transform:
+                    scale(1.05)
+                    rotate(-2deg);
+            }
+        }
+
+
+        .hug-text {
+
+            font-family:
+                'Dancing Script',
+                cursive;
+
+            font-size: 35px;
+
+            color: #d6336c;
+
+            margin-top: 10px;
+        }
+
+
+
+        /* ================================
+           SONG BOX
+        ================================= */
+
+        .song-box {
+
+            margin:
+                50px auto 0;
+
+            max-width: 600px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #ff6f91,
+                    #ff9eb5
+                );
+
+            border-radius: 25px;
+
+            padding:
+                30px 20px;
+
+            text-align: center;
+
+            color: white;
+
+            box-shadow:
+                0 15px 40px
+                rgba(
+                    214,
+                    51,
+                    108,
+                    0.2
+                );
+        }
+
+
+        .music-icon {
+
+            font-size: 45px;
+
+            margin-bottom: 10px;
+        }
+
+
+        .song-box h3 {
+
+            font-family:
+                'Dancing Script',
+                cursive;
+
+            font-size: 34px;
+        }
+
+
+        .song-box p {
+
+            margin:
+                8px 0 18px;
+
+            font-size: 15px;
+        }
+
+
+        /* PRESS THIS TEXT */
+
+        .press-text {
+
+            font-family:
+                'Dancing Script',
+                cursive;
+
+            font-size: 25px;
+
+            margin-bottom: 18px;
+
+            color: white;
+
+            animation:
+                pressPulse 1.5s infinite;
+        }
+
+
+        @keyframes pressPulse {
+
+            0%,
+            100% {
+
+                opacity: 0.75;
+
+                transform:
+                    scale(1);
+            }
+
+
+            50% {
+
+                opacity: 1;
+
+                transform:
+                    scale(1.04);
+            }
+        }
+
+
+        /* SONG BUTTON */
+
+        .song-button {
+
+            display: inline-block;
+
+            text-decoration: none;
+
+            padding:
+                14px 30px;
+
+            border-radius: 30px;
+
+            background: white;
+
+            color: #d6336c;
+
+            font-size: 16px;
+
+            font-weight: 600;
+
+            cursor: pointer;
+
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+
+        .song-button:hover {
+
+            transform:
+                scale(1.06);
+
+            box-shadow:
+                0 8px 20px
+                rgba(
+                    120,
+                    30,
+                    60,
+                    0.2
+                );
+        }
+
+
+
+        /* ================================
+           FOOTER
+        ================================= */
+
+        .footer {
+
+            text-align: center;
+
+            margin-top: 45px;
+
+            font-family:
+                'Dancing Script',
+                cursive;
+
+            font-size: 27px;
+
+            color: #b34465;
+        }
+
+
+
+        /* ================================
+           MOBILE
+        ================================= */
+
+        @media (max-width: 600px) {
+
+            #main {
+
+                padding:
+                    25px 12px 50px;
+            }
+
+
+            .letter {
+
+                padding:
+                    25px 20px;
+            }
+
+
+            .letter p {
+
+                font-size: 21px;
+
+                line-height: 1.65;
+            }
+
+
+            .letter h2 {
+
+                font-size: 36px;
+            }
+
+
+            .hug {
+
+                font-size: 90px;
+            }
+
+
+            .love-final {
+
+                font-size: 34px;
+            }
+
+
+            .sticker-text {
+
+                font-size: 30px;
+            }
+
+
+            .couple {
+
+                font-size: 80px;
+            }
+
+
+            .press-text {
+
+                font-size: 22px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+
+<body>
+
+
+    <!-- =====================================
+         INTRO SCREEN
+    ====================================== -->
+
+    <section id="intro">
+
+        <div class="intro-content">
+
+            <div class="intro-heart">
+                ❤️
+            </div>
+
+
+            <div class="intro-title">
+
+                Happy Boyfriend Day
+
+                <br>
+
+                My Love! ❤️🫂
+
+            </div>
+
+
+            <div class="intro-subtitle">
+
+                A little surprise, just for you...
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         ROMANTIC STICKER
+    ====================================== -->
+
+    <section id="stickerScreen">
+
+        <div class="sticker">
+
+            <div class="couple">
+
+                🥰🫂❤️
+
+            </div>
+
+
+            <div class="sticker-text">
+
+                A little hug for my jaan...
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         MAIN CONTENT
+    ====================================== -->
+
+    <main id="main">
+
+        <div class="container">
+
+
+            <!-- TOP TITLE -->
+
+            <div class="top-title">
+
+                <h1>
+                    For My Jaan ❤️
+                </h1>
+
+
+                <p>
+                    Something I wanted to tell you...
+                </p>
+
+            </div>
+
+
+
+            <!-- =================================
+                 LOVE LETTER
+            ================================== -->
+
+            <div class="letter">
+
+
+                <h2>
+                    HAPPY BOYFRIEND DAY! ❤️
+                </h2>
+
+
+
+                <p>
+                    Sach kahe to humko ye din bhi hota hai ye pata hi nahi tha...
+                    lekin jab pata chala to soche ki...
+                </p>
+
+
+
+                <p class="highlight">
+
+                    Aapko special feel karwana mere liye kisi ek din kaise ho sakta hai? ❤️
+
+                </p>
+
+
+
+                <p>
+
+                    Kisi ek date ko choose karke hum kaise keh de ki aaj aap mere liye important hai?
+                    Jabki sach toh ye hai ki aapki importance kisi calendar ki date ki mohtaaj nahi hai. ❤️
+
+                </p>
+
+
+
+                <p>
+
+                    Aapke liye mere dil mein jo jagah hai,
+                    woh kisi ek din ke message,
+                    kisi ek wish ya kisi ek celebration se explain nahi ki ja sakti.
+
+                </p>
+
+
+
+                <p>
+
+                    Isliye aaj ka din mere liye sirf “Boyfriend Day” nahi hai.
+                    Aaj bas ek bahana hai aapko woh sab kehne ka,
+                    jo shayad hum har roz feel karte hai,
+                    par har roz words mein nahi keh paate.
+
+                </p>
+
+
+
+                <p>
+
+                    Aap meri life mein sirf ek relationship ke naam se nahi ho.
+                    Aap woh insaan ho jiske saath hum apni khushiyan share karte hai,
+                    apni pareshaniyan batate hai,
+                    apni pagalo waali baato se pareshaan karte hai...
+
+                </p>
+
+
+
+                <p>
+
+                    Lekin aap sab kuch handle karte hai —
+                    meri har ek harkat,
+                    mera bachpana,
+                    jo humne kabhi kisi ko nahi dikhaya hai.
+
+                    Yahan tak ki mere ghar wale bhi nahi dekhe hai.
+
+                </p>
+
+
+
+                <p>
+
+                    Kyuki aapne kabhi kaha hi nahi ki...
+
+                    “Bachcho jaise harkat mat kariye.” ❤️
+
+                </p>
+
+
+
+                <p>
+
+                    Thank you babu for everything. ❤️
+
+                    Hamesha humko support karne ke liye,
+                    humko samajhne aur samjhane ke liye,
+                    sahi-galat batane ke liye,
+                    mera itna khayal rakhne ke liye,
+                    mere liye hamesha maujood rehne ke liye...
+
+                </p>
+
+
+
+                <p>
+
+                    Mere har problem ka solution nikalne ke liye,
+                    humko hamesha support karne ke liye,
+                    humko protect karne ke liye,
+                    meri har zidd puri karne ke liye...
+
+                </p>
+
+
+
+                <p>
+
+                    Isiliye shayad hum aur bigadte ja rahe hai
+                    aur zidd karne lage hai... 😂❤️
+
+                </p>
+
+
+
+                <p class="highlight">
+
+                    Aur bhi sab jo hum keh bhi nahi paa rahe hai... ❤️
+
+                </p>
+
+
+
+                <p>
+
+                    Mere ek baar kehne par aap mere paas aa jate hai.
+
+                    Humko jab bhi zarurat hoti hai,
+                    aap mere paas hote hai.
+
+                </p>
+
+
+
+                <p>
+
+                    Aur hamesha rahiyega babu...
+
+                    kyuki...
+
+                </p>
+
+
+
+                <p class="highlight">
+
+                    Now I can't handle myself without you... ❤️
+
+                </p>
+
+
+
+                <p class="highlight">
+
+                    Now I won't imagine myself without you,
+                    mere jaan!! ❤️
+
+                </p>
+
+
+
+                <p>
+
+                    I always wish and pray for you babu
+                    ki aapko apni life mein har chiz mile,
+                    jo bhi aapka dream hai.
+
+                </p>
+
+
+
+                <p>
+
+                    Hum aapko wahan dekhna chahte hain
+                    jahan aap sabse upar ho,
+                    sabse successful person.
+
+                </p>
+
+
+
+                <p class="highlight">
+
+                    Aur aap ek din jarur honge...
+                    I believe in you babu. ❤️
+
+                </p>
+
+
+
+                <p class="highlight">
+
+                    I am really proud of you mere jaan. ❤️
+
+                </p>
+
+
+
+                <p>
+
+                    Aap jaise hardwork karte hai,
+                    jaise cheezon ko handle karte hai,
+                    kabhi kabhi khud thak kar bhi
+                    bas isiliye lage rahte hai
+                    kyuki aapko apni life mein kuch achieve karna hai...
+
+                </p>
+
+
+
+                <p>
+
+                    Kabhi kabhi bas isiliye ki saamne wale ko aapki zarurat hai...
+                    aur isse humko bahut inspiration milta hai.
+
+                </p>
+
+
+
+                <p class="highlight">
+
+                    Hum aapse bahut bahut jyada wala pyaar karte hai babu. ❤️
+
+                </p>
+
+
+
+                <p>
+
+                    JAAN hai aap mere...
+
+                    Aapke bina mera har din adhura hai.
+
+                    Aapse agar ek din bhi achche se baat na ho,
+                    to aisa lagta hai kuch bhi achcha nahi lag raha hai.
+
+                </p>
+
+
+
+                <p>
+
+                    Aapko na dekhe to dil nahi lagta mera... ❤️
+
+                </p>
+
+
+
+                <p>
+
+                    Lekin ek shikayat hai aapse...
+
+                </p>
+
+
+
+                <p class="highlight">
+
+                    Aap humko Maggie nahi khilaye hai
+                    apne haath ka abhi tak! 😭😂❤️
+
+                </p>
+
+
+
+                <p>
+
+                    Humko pata hai ki aapko aata hai banane...
+
+                    aur jaise bhi aata hai banane babu,
+
+                    jaise bhi banega,
+
+                    mere liye duniya ki sabse tasty Maggie hogi. ❤️
+
+                </p>
+
+
+
+                <p>
+
+                    Uske baad dusra kuch bolenge banane ke liye,
+                    don't worry...
+
+                </p>
+
+
+
+                <p>
+
+                    Kyuki hum babu hai na aapke chote se
+                    aur aap meri baby girl. ❤️
+
+                </p>
+
+
+
+                <p>
+
+                    Aap mere liye bahut hi zyada important hai mere jaan...
+
+                    itna ki hum bata nahi sakte hai.
+
+                </p>
+
+
+
+                <p>
+
+                    Sabse special...
+
+                    mere best friend. ❤️
+
+                </p>
+
+
+
+                <p>
+
+                    Bhagwaan aapko har buri chiz,
+                    buri nazar,
+                    bure log sabse bacha kar rakhe.
+
+                    Aapko bahut sari khushiyan de. ❤️
+
+                </p>
+
+
+
+                <p>
+
+                    Aapke saath bas sab achcha-achcha ho hamesha...
+
+                </p>
+
+
+
+                <p class="highlight">
+
+                    I PRAY FOR YOU mere shona. ❤️
+
+                </p>
+
+
+
+                <div class="love-final">
+
+                    I LOVE YOU MERE JAAN! ❤️❤️
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =================================
+                 HUG
+            ================================== -->
+
+            <div class="hug-section">
+
+
+                <div class="hug">
+
+                    🫂❤️
+
+                </div>
+
+
+                <div class="hug-text">
+
+                    One big hug for you, my love...
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================
+                 SONG
+            ================================== -->
+
+            <div class="song-box">
+
+
+                <div class="music-icon">
+
+                    🎵❤️
+
+                </div>
+
+
+                <h3>
+
+                    This song is for you...
+
+                </h3>
+
+
+                <p>
+
+                    “Tu zaroori hai mujhko zinda rehne ke liye” ❤️
+
+                </p>
+
+
+                <!-- PRESS MESSAGE -->
+
+                <div class="press-text">
+
+                    Press this button, jaan... 🥺❤️
+
+                </div>
+
+
+                <!-- SONG BUTTON -->
+
+                <a
+                    href="https://www.youtube.com/watch?v=FfIKWM1Qu8Y"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="song-button"
+                >
+
+                    🎧 Listen this Song which is for you ❤️
+
+                </a>
+
+
+            </div>
+
+
+
+            <!-- =================================
+                 FOOTER
+            ================================== -->
+
+            <div class="footer">
+
+                Made with lots and lots of love ❤️
+
+                <br>
+
+                Just for you, my jaan 🫂
+
+            </div>
+
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =====================================
+         JAVASCRIPT
+    ====================================== -->
+
+    <script>
+
+
+        /* =================================
+           INTRO = 5 SECONDS
+        ================================== */
+
+        setTimeout(function() {
+
+
+            document.getElementById("intro").style.opacity = "0";
+
+
+            setTimeout(function() {
+
+
+                document.getElementById("intro").style.display = "none";
+
+
+                document.getElementById("stickerScreen").style.display = "flex";
+
+
+            }, 1000);
+
+
+        }, 5000);
+
+
+
+        /* =================================
+           STICKER = 2 SECONDS
+        ================================== */
+
+        setTimeout(function() {
+
+
+            document.getElementById("stickerScreen").style.opacity = "0";
+
+
+            setTimeout(function() {
+
+
+                document.getElementById("stickerScreen").style.display = "none";
+
+
+                document.getElementById("main").style.display = "block";
+
+
+            }, 800);
+
+
+        }, 7000);
+
+
+
+        /* =================================
+           FLOATING HEARTS
+        ================================== */
+
+        function createHeart() {
+
+
+            const heart =
+                document.createElement("div");
+
+
+            heart.classList.add("heart");
+
+
+            const hearts = [
+
+                "❤️",
+                "💕",
+                "💗",
+                "💖",
+                "💓"
+
+            ];
+
+
+            heart.innerHTML =
+                hearts[
+                    Math.floor(
+                        Math.random()
+                        *
+                        hearts.length
+                    )
+                ];
+
+
+            heart.style.left =
+                Math.random()
+                *
+                100
+                +
+                "vw";
+
+
+            heart.style.animationDuration =
+                (
+                    5
+                    +
+                    Math.random()
+                    *
+                    4
+                )
+                +
+                "s";
+
+
+            heart.style.fontSize =
+                (
+                    15
+                    +
+                    Math.random()
+                    *
+                    20
+                )
+                +
+                "px";
+
+
+            document.body.appendChild(heart);
+
+
+            setTimeout(function() {
+
+                heart.remove();
+
+            }, 9000);
+
+        }
+
+
+        setInterval(
+            createHeart,
+            700
+        );
+
+
+    </script>
+
+
+</body>
+
+</html>
